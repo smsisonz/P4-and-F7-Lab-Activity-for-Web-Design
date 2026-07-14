@@ -1,105 +1,183 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    transition:0.4s;
+}
+header{
+    background:#36003f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-family:Garamond,Baskerville,serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
+header p{
+    margin-top:10px;
+    font-style:italic;
 }
 
-header {
-    background-color: #36003f;
-    color: white;
-    font-family: Garamond, Baskerville, serif; ;
-    text-align: center;
-    padding: 20px;
+nav{
+    background:#6a5570;
+    box-shadow:0 3px 8px rgba(0,0,0,.2);
 }
 
-nav {
-    background-color: #6a5570;
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    list-style:none;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+nav li{
+    padding:15px;
 }
 
-nav li {
-    padding: 15px 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:5px;
+    transition:.3s;
 }
 
-nav a {
-    color: white;
-    font-family: "Book Antiqua", Palatino, serif;
-    text-decoration: none;
+nav a:hover{
+    background:#9572a6;
 }
 
-main {
-    flex: 1;
-    padding: 30px;
+nav a.active{
+    background:#4d235f;
+    font-weight:bold;
 }
 
-.content {
-    max-width: 800px;
-    margin: auto;
+#darkModeBtn{
+    border:none;
+    background:#452255;
+    color:white;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
 }
 
-.content h2 {
-    font-family: Garamond, Baskerville, serif;
-    margin-bottom: 15px;
+#darkModeBtn:hover{
+    background:#2d1337;
 }
 
-.content p {
-    font-family: "Palatino Linotype", Palatino, serif;
-    margin-bottom: 10px;
-    line-height: 1.6;
+main{
+    flex:1;
+    padding:40px;
 }
 
-footer {
-    background-color: #110025;
-    color: white;
-    font-family: "Book Antiqua", Palatino, serif;
-    text-align: center;
-    padding: 15px;
+.content{
+    max-width:850px;
+    margin:auto;
 }
 
-@media (max-width: 768px) {
+.content h2{
+    font-family:Garamond,Baskerville,serif;
+    margin-bottom:20px;
+}
 
-    nav ul {
-        flex-wrap: wrap;
+.content p{
+    line-height:1.7;
+    margin-bottom:12px;
+    font-family:"Palatino Linotype",serif;
+}
+
+.card{
+    transition:.3s;
+    border:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card img{
+    height:240px;
+    object-fit:cover;
+}
+
+.btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+footer{
+    background:#110025;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:auto;
+}
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode header{
+    background:#1d1d1d;
+}
+
+.dark-mode nav{
+    background:#2c2c2c;
+}
+
+.dark-mode footer{
+    background:#1d1d1d;
+}
+
+.dark-mode .card{
+    background:#242424;
+    color:white;
+}
+
+.dark-mode .btn-primary{
+    background:#6b42a1;
+    border:none;
+}
+
+.dark-mode .btn-secondary{
+    background:#555;
+    border:none;
+}
+
+@media(max-width:768px){
+    nav ul{
+        flex-direction:column;
+    }
+    main{
+        padding:20px;
+    }
+    .card img{
+        height:220px;
+    }
+}
+
+@media(max-width:480px){
+    header h1{
+        font-size:28px;
+    }
+    nav li{
+        width:100%;
+        text-align:center;
+    }
+    #darkModeBtn{
+        width:90%;
     }
 
-    nav li {
-        padding: 12px;
-    }
-
-    main {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav li {
-        border-bottom: 1px solid #777;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    main {
-        padding: 15px;
-    }
 }
