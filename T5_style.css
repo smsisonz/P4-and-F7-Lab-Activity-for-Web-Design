@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #36003f;
+    color: white;
+    font-family: Garamond, Baskerville, serif; ;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #6a5570;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    padding: 15px 20px;
+}
+
+nav a {
+    color: white;
+    font-family: "Book Antiqua", Palatino, serif;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+.content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.content h2 {
+    font-family: Garamond, Baskerville, serif;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-family: "Palatino Linotype", Palatino, serif;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #110025;
+    color: white;
+    font-family: "Book Antiqua", Palatino, serif;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav li {
+        padding: 12px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        border-bottom: 1px solid #777;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
